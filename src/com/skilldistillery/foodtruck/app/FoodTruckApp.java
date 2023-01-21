@@ -42,13 +42,15 @@ public class FoodTruckApp {
 	private void avgTruckRating() {
 		// calculate the average
 		double sum = 0;
+		double numtrucks =0;
 		for (int i = 0; i < fleet.length; i++) {
 			if (fleet[i] != null) {
 				sum = sum + fleet[i].getTruckRating();
+				numtrucks++;
 			}
 		}
-
-		double avg = sum / fleet.length;
+		
+		double avg = sum / numtrucks;
 
 		System.out.println("The average truck rating is " + avg);
 
