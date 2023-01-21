@@ -10,7 +10,7 @@ public class FoodTruckApp {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello! welcome to the foodtruck app!\nWe'er going to rate some foodtrucks.");
+		System.out.println("Hello! Welcome to the foodtruck app!\nWe'er going to rate some foodtrucks.");
 		FoodTruckApp app = new FoodTruckApp();
 		app.makeTruck();
 		app.menu();
@@ -52,7 +52,7 @@ public class FoodTruckApp {
 		
 		double avg = sum / numtrucks;
 
-		System.out.println("The average truck rating is " + avg);
+		System.out.println("\nThe average truck rating is " + avg + "\n");
 
 	}
 
@@ -67,7 +67,7 @@ public class FoodTruckApp {
 			}
 
 		}
-		System.out.println("The highest rated truck is " + highest);
+		System.out.println("\nThe highest rated truck is " + highest + "\n");
 
 	}
 
@@ -76,11 +76,11 @@ public class FoodTruckApp {
 		boolean go = true;
 
 		do {
-
-			System.out.println("1: List all existing food trucks. ");
+			System.out.println("Pleaae select a menu option 1-4. ");
+			System.out.println("\n1: List all existing food trucks. ");
 			System.out.println("2: See the average rating of food trucks. ");
 			System.out.println("3: Display the highest-rated food truck. ");
-			System.out.println("4: Quit. ");
+			System.out.print("4: Quit. ");
 			int userIn = sc.nextInt();
 			switch (userIn) {
 
@@ -89,7 +89,7 @@ public class FoodTruckApp {
 					if (fleet[i] == null) {
 						continue;
 					} else
-						System.out.println(fleet[i].toString());
+						System.out.println("\n" +fleet[i].toString());
 				}
 				break;
 
@@ -105,6 +105,10 @@ public class FoodTruckApp {
 				System.out.println("Goodbye");
 				sc.close();
 				go = false;
+				break;
+
+			default:
+				continue;
 			}
 		} while (go == true);
 		return;

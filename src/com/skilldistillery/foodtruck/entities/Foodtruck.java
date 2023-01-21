@@ -1,10 +1,9 @@
 package com.skilldistillery.foodtruck.entities;
 
-import java.util.*;
 
 public class Foodtruck {
 	
-	private static int nextTruckId = 0;
+	private static int nextTruckId = 1;
 	private int truckId =1;
 	private String truckName;
 	private int truckRating;
@@ -44,7 +43,6 @@ public class Foodtruck {
 	}
 
 	public Foodtruck( String truckName, String foodType, int truckRating) {
-		super();
 		this.truckId = nextTruckId;
 		nextTruckId++;
 		this.truckName = truckName;
@@ -57,8 +55,8 @@ public class Foodtruck {
 
 	@Override
 	public String toString() {
-		return "Foodtruck [truckid=" + truckId + ", truckName=" + truckName + ", truckRating=" + truckRating
-				+ ", foodType=" + foodType + "]";
+		return  "Truck# " + truckId + ", Name:" + truckName + ", Rating:" + truckRating +
+				", Type:"  +  foodType + "\n";
 	}
 
 }
