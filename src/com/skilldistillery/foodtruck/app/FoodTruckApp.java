@@ -10,7 +10,7 @@ public class FoodTruckApp {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello! Welcome to the foodtruck app!\nWe'er going to rate some foodtrucks.");
+		System.out.println("Hello! Welcome to the foodtruck app!\nWe are going to rate some foodtrucks.");
 		FoodTruckApp app = new FoodTruckApp();
 		app.makeTruck();
 		app.menu();
@@ -42,17 +42,17 @@ public class FoodTruckApp {
 	private void avgTruckRating() {
 		// calculate the average
 		double sum = 0;
-		double numtrucks =0;
+		double numtrucks = 0;
 		for (int i = 0; i < fleet.length; i++) {
 			if (fleet[i] != null) {
 				sum = sum + fleet[i].getTruckRating();
 				numtrucks++;
 			}
 		}
-		
+
 		double avg = sum / numtrucks;
 
-		System.out.println("\nThe average truck rating is " + avg + "\n");
+		System.out.println("\nThe average truck rating is " + (String.format("%,.2f", avg)));
 
 	}
 
@@ -89,7 +89,7 @@ public class FoodTruckApp {
 					if (fleet[i] == null) {
 						continue;
 					} else
-						System.out.println("\n" +fleet[i].toString());
+						System.out.println("\n" + fleet[i].toString());
 				}
 				break;
 

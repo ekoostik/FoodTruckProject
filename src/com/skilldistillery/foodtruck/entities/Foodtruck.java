@@ -4,7 +4,7 @@ package com.skilldistillery.foodtruck.entities;
 public class Foodtruck {
 	
 	private static int nextTruckId = 1;
-	private int truckId =1;
+	private int truckId;
 	private String truckName;
 	private int truckRating;
 	private String foodType;
